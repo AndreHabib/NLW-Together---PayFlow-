@@ -9,7 +9,7 @@
 <p align="center">Aplicação desenvolvida na NLW6 na trilha de Flutter</p>
 
 <h3 align="center"> 
-🚧  Finalizado  🚧
+  Finalizado 
 </h3>
 
 
