@@ -15,7 +15,7 @@
 
 ### 💻 Projeto
 
-PayFlow é Um projeto criado pela Rocketseat durante o evento NLW Together Trilha Flutter, que serve para controlar os seus boletos. 
+PayFlow é Um projeto criado pela Rocketseat durante o evento NLW Together Trilha Flutter com o intuito de gerenciar boletos. 
 
 ### ✅ Demonstração
 <!-- <p>
