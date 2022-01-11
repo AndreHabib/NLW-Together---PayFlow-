@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:payflow/modules/extract/extract_page.dart';
 import 'package:payflow/modules/home/home_controller.dart';
+import 'package:payflow/modules/my_billets/my_billets_page.dart';
+import 'package:payflow/shared/models/user_model.dart';
 import 'package:payflow/shared/themes/app_colors.dart';
 import 'package:payflow/shared/themes/app_text_styles.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  final UserModel user;
+  const HomePage({Key? key, required this.user}) : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -12,10 +16,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final homeController = HomeController();
-  final pages = [
-    Container(color: Colors.red),
-    Container(color: Colors.blue),
-  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +33,8 @@ class _HomePageState extends State<HomePage> {
                     style: TextStyles.titleRegular,
                     children: [
                       TextSpan(
-                          text: "André", style: TextStyles.titleBoldBackground)
+                          text: '${widget.user.name}',
+                          style: TextStyles.titleBoldBackground)
                     ]),
               ),
               subtitle: Text('Mantenha suas contas em dia',
@@ -43,29 +45,45 @@ class _HomePageState extends State<HomePage> {
                 decoration: BoxDecoration(
                   color: Colors.black,
                   borderRadius: BorderRadius.circular(5),
+                  image: DecorationImage(
+                      image: NetworkImage(widget.user.photoURL)),
                 ),
               ),
             ),
           ),
         ),
       ),
-      body: pages[homeController.currentPage],
+      body: [
+        MyBilletsPage(
+          key: UniqueKey(),
+        ),
+        ExtractPage(
+          key: UniqueKey(),
+        ),
+      ][homeController.currentPage],
       bottomNavigationBar: Container(
         height: 90,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             IconButton(
-                onPressed: () {
-                  homeController.setPage(0);
-                  setState(() {});
-                },
-                icon: Icon(
-                  Icons.home,
-                  color: AppColors.primary,
-                )),
+              onPressed: () {
+                homeController.setPage(0);
+                setState(() {});
+              },
+              icon: Icon(
+                Icons.home,
+                color: homeController.currentPage == 0
+                    ? AppColors.primary
+                    : AppColors.body,
+              ),
+            ),
             InkWell(
-              onTap: () => Navigator.pushNamed(context, '/barcode_scanner'),
+              onTap: () async {
+                // await Navigator.pushNamed(context, '/insert_billet');
+                await Navigator.pushNamed(context, '/barcode_scanner');
+                setState(() {});
+              },
               child: Container(
                 height: 56,
                 width: 56,
@@ -86,7 +104,9 @@ class _HomePageState extends State<HomePage> {
               },
               icon: Icon(
                 Icons.description_outlined,
-                color: AppColors.body,
+                color: homeController.currentPage == 1
+                    ? AppColors.primary
+                    : AppColors.body,
               ),
             ),
           ],
