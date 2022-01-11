@@ -37,7 +37,7 @@ PayFlow é Um projeto criado pela Rocketseat durante o evento NLW Together Trilh
 
 ```bash
 # Clone este repositório
-$ git clone 
+$ git clone https://github.com/AndreHabib/NLW-Together---PayFlow-.git
 
 # Instale as dependências
 $ flutter pub get
