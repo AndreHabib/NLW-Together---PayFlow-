@@ -19,9 +19,9 @@ PayFlow é Um projeto criado pela Rocketseat durante o evento NLW Together Trilh
 
 
 ### ✅ Demonstração
-<!-- <p>
-  <img src="https://github.com/gabriel-nt/Payflow/blob/master/assets/images/cover.png" alt="PayFlow" />
-</p> -->
+<p>
+  <img src="https://github.com/AndreHabib/NLW-Together---PayFlow-/blob/master/payflow/assets/images/capa-git.png" alt="PayFlow" />
+</p>
 
 ### Aplicações
 
