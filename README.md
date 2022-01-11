@@ -13,12 +13,12 @@
 </h3>
 
 
-### 💻 Projeto
+### Projeto
 
 PayFlow é Um projeto criado pela Rocketseat durante o evento NLW Together Trilha Flutter, trata-se de um app mobile feito em Flutter para Gerenciamento de Boletos, contendo recursos como o uso de câmera e galeria, Machine Leaning com MLKit, Firebase Core e SignIn, Animações e Estilizações Personalizadas, entre vários outros pontos, como o uso do SharedPreferences.
 
 
-### ✅ Demonstração
+### Capa
 <p>
   <img src="https://github.com/AndreHabib/NLW-Together---PayFlow-/blob/master/payflow/assets/images/capa-git.png" alt="PayFlow" />
 </p>
