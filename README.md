@@ -33,7 +33,7 @@ PayFlow é Um projeto criado pela Rocketseat durante o evento NLW Together Trilh
 - [x] Tela de extratos.
 
 
-### Rodando o Mobile
+### Rodando 
 
 ```bash
 # Clone este repositório
