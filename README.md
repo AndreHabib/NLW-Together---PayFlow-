@@ -22,14 +22,15 @@ PayFlow é Um projeto criado pela Rocketseat durante o evento NLW Together Trilh
   <img src="https://github.com/gabriel-nt/Payflow/blob/master/assets/images/cover.png" alt="PayFlow" />
 </p> -->
 
-### Funções
+### Aplicações
 
-- [x] Login com Google
-- [x] Cadastrar boletos
-- [x] Scanner de código de barras
-- [x] Listagem dos boletos
-- [x] Tela de Meu extrato
-- [x] Splash
+- [x] Splash.
+- [x] Login com Google.
+- [x] Cadastro de boletos.
+- [x] Scanner de código de barras.
+- [x] Listagem dos boletos.
+- [x] Tela de extratos.
+
 
 ### Rodando o Mobile
 
